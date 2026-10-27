@@ -18,6 +18,7 @@ A standalone workspace for planning, launching, measuring, and optimizing paid a
 - `conversion-tracking/` — measurement plan and QA.
 - `analytics/` — reporting definitions and optimization cadence.
 - `reports/` — dated performance reports (add only verified account data).
+- `docs/google-ads-mcp.md` — how Claude Code connects to the Google Ads API (MCP server, credentials).
 
 ## Before launch
 1. Confirm the product features and offers currently available on SketchRoot.com.
@@ -26,6 +27,9 @@ A standalone workspace for planning, launching, measuring, and optimizing paid a
 4. Configure consent/privacy notices and conversion tracking.
 5. Test every landing page and conversion action.
 6. Launch with a controlled budget; review search terms and lead quality frequently.
+
+## Claude Code ↔ Google Ads
+Claude Code sessions in this repo load the open-source [google-ads-mcp](https://github.com/promobase/google-ads-mcp) server (`.mcp.json`), which can read reports and create or edit campaigns. Credentials are set as environment variables, never committed. See [`docs/google-ads-mcp.md`](docs/google-ads-mcp.md).
 
 ## Guardrails
 - Do not commit passwords, API keys, customer personal data, or Google Ads credentials.
