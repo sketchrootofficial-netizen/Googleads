@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DEST="$ROOT/.vendor/google-ads-mcp"
 export PATH="$HOME/.local/bin:$PATH"
+export GOOGLE_ADS_USE_PROTO_PLUS="${GOOGLE_ADS_USE_PROTO_PLUS:-true}"
 
 if [ ! -f "$DEST/.env" ] || [ ! -d "$DEST/.venv" ]; then
   bash "$ROOT/scripts/install-google-ads-mcp.sh"
